@@ -1,0 +1,6 @@
+body, html {
+    height: 100%;
+    font-size: 14px;
+    background-color: hsl(200, 18%, 26%);
+    font-family: 'Raleway', Arial, sans-serif;
+}
