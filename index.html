@@ -22,6 +22,9 @@
         <div class="content-container">
             <div class="bg-top">
                 <div class="button-container">
+                    <button class="rgb-button" type="button">RGB</button>
+                    <button class="hsl-button" type="button">HSL</button>
+                    <button class="rainbow-vomit" type="button">Kaleidoscope</button>
                     <button class="reset-shake" type="button">Shake and Erase</button>
                 </div>
             </div>
@@ -32,7 +35,26 @@
                    </div>
                    <h1>Etch-A-Sketch</h1>
                </div>
-           </div> 
+           </div>
+           <div class="input-container">
+            <div class="input-box">
+                <label for="grid">Enter Grid Size</label>
+                    <div class="input-wrapper">
+                        <input placeholder="e.g. 5" id="grid" required="required">
+                        <button class="arrow-submit" type="submit">
+                            <img src="images/arrow.svg">
+                        </button>
+                    </div>
+                <div class="some-space">&nbsp;</div>
+                <label for="pick-color">Choose a color</label>
+                <div class="input-wrapper">
+                    <input placeholder="HEX only!" id="pick-color" require="required">
+                    <button class="arrow-submit" type="submit">
+                        <img src="images/arrow.svg">
+                    </button>
+                </div>
+            </div>
+           </div>
         </div>
         <script src="script.js"></script>
     </body>
