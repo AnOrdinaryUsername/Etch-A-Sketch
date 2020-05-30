@@ -8,7 +8,7 @@
 
 .bg-top {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     position: absolute;
     left: 50%;
@@ -30,8 +30,6 @@
     display: flex;
     position: relative;
     flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     min-width: auto;
     max-width: 80%;
@@ -40,7 +38,7 @@
 }
 
 h1 {
-    font: normal normal 600 2rem/1.5rem 'Raleway', sans-serif;
+    font: normal normal 600 2.4rem/1.5rem 'Raleway', sans-serif;
     letter-spacing: 5px;
     margin: 0 3rem;
     padding-bottom: 2rem;
@@ -53,12 +51,13 @@ h1 {
     flex-flow: column nowrap;
     justify-content: flex-start;
     position: absolute;
-    top: 10rem;
-    border: none;
+    right: -5rem;
+    top: 8rem;
     width: 50rem;
     height: 35rem;
     background-color: hsl(358, 88%, 44%);
     border-radius: 24px;
+    border: 3px solid black;
 }
 
 .etch-a-sketch {
@@ -73,18 +72,38 @@ h1 {
 
 .button-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: auto;
     height: auto;
     position: relative;
-    top: 10rem;
-    transform: skewY(8deg) scale(1) translate3d(0, 0, 0);
+    top: 20rem;
+    /* transform: skewY(8deg) scale(1) translate3d(0, 0, 0); */
 }
 
 .reset-shake {
     width: auto;
     height: auto;    
+}
+
+.rgb-button {
+    width: auto;
+    height: auto;
+}
+
+.hsl-button {
+    width: auto;
+    height: auto;
+}
+
+.rainbow-vomit {
+    width: auto;
+    height: auto;
+}
+
+button {
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 1.5rem;
+    margin: 1rem;
+    font-style: italic;
 }
   
 @keyframes MoveUpDown {
@@ -97,7 +116,86 @@ h1 {
 }
 
 .shake {
-    animation: MoveUpDown 1s ease-in-out 0s;
+    animation: MoveUpDown 0.8s ease-in-out 0s;
+}
+
+.input-container {
+    display: flex;
+    position: relative;
+    flex-flow: column nowrap;
+    text-align: center;
+    min-width: auto;
+    max-width: 80%;
+    height: 80%;
+    z-index: 1;
+}
+
+.input-box {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    position: absolute;
+    left: 20rem;
+    top: 22rem;
+    width: max-content;
+    height: auto;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+}
+
+label {
+    color: white;
+    margin: 1rem;
+    align-self: flex-start;
+    font-size: 1.78rem;
+    letter-spacing: 2px;
+}
+
+input {
+    color: white;
+    margin: 1rem;
+    border-radius: 1.78rem;
+    height: 1.5rem;
+}
+
+.arrow-submit {
+    position: relative;
+    background-color:hsl(200, 18%, 26%);
+    padding: 0;
+    margin-left: 0;
+    margin-bottom: auto;
+    font-size: unset;
+    border-radius: 150px;
+    border: 2px solid white;
+}
+
+.arrow-submit:focus {
+    outline: none;
+}
+
+.arrow-submit:active {
+    border-radius: 150px;
+    background-color: white;
+    top: 3px;
+    border: 2px solid white;
+    border-bottom-style: solid;
+    border-bottom-width: 0px;
+    padding: 0;
+}
+
+img {
+    transform: rotate(270deg);
+    width: 30px;
+    height: auto;
+}
+
+.some-space {
+    height: 5px;
+    width: auto;
 }
 
 html {
@@ -118,4 +216,5 @@ body {
     font-size: 14px;
     background-color: hsl(200, 18%, 26%);
     font-family: 'Raleway', Arial, sans-serif;
+    box-sizing: border-box;
 }
