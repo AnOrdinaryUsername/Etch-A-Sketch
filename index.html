@@ -38,21 +38,23 @@
            </div>
            <div class="input-container">
             <div class="input-box">
-                <label for="grid">Enter Grid Size</label>
+                <form>
+                    <label for="grid">Enter Grid Size</label>
+                        <div class="input-wrapper">
+                            <input placeholder="e.g. 5" id="grid" required="required">
+                            <button class="arrow-submit" type="submit">
+                                <img src="images/arrow.svg">
+                            </button>
+                        </div>
+                    <div class="some-space">&nbsp;</div>
+                    <label for="pick-color">Choose a color</label>
                     <div class="input-wrapper">
-                        <input placeholder="e.g. 5" id="grid" required="required">
+                        <input placeholder="HEX only!" id="pick-color" require="required">
                         <button class="arrow-submit" type="submit">
                             <img src="images/arrow.svg">
                         </button>
                     </div>
-                <div class="some-space">&nbsp;</div>
-                <label for="pick-color">Choose a color</label>
-                <div class="input-wrapper">
-                    <input placeholder="HEX only!" id="pick-color" require="required">
-                    <button class="arrow-submit" type="submit">
-                        <img src="images/arrow.svg">
-                    </button>
-                </div>
+                </form>
             </div>
            </div>
         </div>
