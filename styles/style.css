@@ -102,6 +102,21 @@ button {
     font-size: 1.5rem;
     margin: 1rem;
     font-style: italic;
+    background-color: initial;
+    border: 2px groove white;
+    padding: 0.5rem;
+    transition: all 0.3s;
+    color: white;
+    border-radius: 15px;
+}
+
+button:active, button:hover {
+    color: black;
+    background-color: white;
+}
+
+button:focus {
+    outline: none;
 }
   
 @keyframes MoveUpDown {
@@ -228,7 +243,6 @@ body {
         top: 20%;
         right: 20%;
         left: 0%;
-        transform: skewY(8deg) scale(1) translate3d(0, 0, 0);
     }
     .input-box {
         left: 17vw;
