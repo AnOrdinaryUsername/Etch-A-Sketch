@@ -1,63 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Etch-A-Sketch</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="Description" content="Everyone's favorite drawing toy in
+
+<head>
+    <meta charset="utf-8">
+    <title>Etch-A-Sketch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="Everyone's favorite drawing toy in
                     an online format!">
-        <meta name="theme-color" content="#db5945">
+    <meta name="theme-color" content="#db5945">
 
-        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
-        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-        <link href="styles/normalize.css" rel="stylesheet">
-        <link href="styles/style.css" rel="stylesheet">
-         
-    </head>
-    <body>
-        <div class="content-container">
-            <div class="bg-top">
-                <div class="button-container">
-                    <button class="rgb-button" type="button">RGB</button>
-                    <button class="hsl-button" type="button">HSL</button>
-                    <button class="rainbow-vomit" type="button">Kaleidoscope</button>
-                    <button class="reset-shake" type="button">Shake and Erase</button>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="styles/normalize.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="content-container">
+        <div class="bg-top">
+            <div class="button-container">
+                <button class="default-button" type="button">Default</button>
+                <button class="hsl-button" type="button">HSL</button>
+                <button class="rainbow-vomit" type="button">Kaleidoscope</button>
+                <button class="reset-shake" type="button">Shake and Erase</button>
+            </div>
+        </div>
+        <div class="etch-wrapper">
+            <div class="etch-box">
+                <div class="etch-a-sketch">
+
+                </div>
+                <div class="bottom-box">
+                    <div class="circle"></div>
+                    <h1>Etch-A-Sketch</h1>
+                    <div class="circle"></div>
                 </div>
             </div>
-           <div class="etch-wrapper">
-               <div class="etch-box">
-                   <div class="etch-a-sketch">
-                      
-                   </div>
-                   <h1>Etch-A-Sketch</h1>
-               </div>
-           </div>
-           <div class="input-container">
-            <div class="input-box">
-                <form>
-                    <label for="grid">Enter Grid Size</label>
-                        <div class="input-wrapper">
-                            <input placeholder="e.g. 5" id="grid" required="required">
-                            <button class="arrow-submit" type="submit">
-                                <img src="images/arrow.svg">
-                            </button>
-                        </div>
-                    <div class="some-space">&nbsp;</div>
-                    <label for="pick-color">Choose a color</label>
-                    <div class="input-wrapper">
-                        <input placeholder="HEX only!" id="pick-color" require="required">
-                        <button class="arrow-submit" type="submit">
-                            <img src="images/arrow.svg">
-                        </button>
-                    </div>
-                </form>
-            </div>
-           </div>
         </div>
-        <script src="script.js"></script>
-    </body>
+        <div class="input-container">
+            <div class="input-box">
+                <label for="grid">Enter Grid Size</label>
+                <div class="input-wrapper">
+                    <input placeholder=" From 1 - 100" class="grid" 
+                        type="number" min="1" max="100">
+                    <button class="arrow-submit" type="submit">
+                        <img src="images/arrow.svg">
+                    </button>
+                </div>
+                <div class="some-space">&nbsp;</div>
+                <label for="pick-color">Choose a color</label>
+                <div class="input-wrapper">
+                    <input class="pick-color" type="color">
+                    <button class="arrow-submit" type="submit">
+                        <img src="images/arrow.svg">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
 </html>
