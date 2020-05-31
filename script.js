@@ -98,7 +98,7 @@ function inputColor() {
     let singleColorOnly = false;
 
     document.querySelectorAll('.arrow-submit')[1].addEventListener('click', function(e) {
-        addTrail(inputs.value, false);
+        addTrail(inputs.value, singleColorOnly);
     });
 }
 
@@ -106,7 +106,7 @@ function main() {
     let initialColor = 'black';
     let initialSize = 64;
 
-    // Size and colors on page load
+    // Size and color draw on page load
     createGrid(initialSize);
     addTrail(initialColor);
 
