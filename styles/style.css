@@ -37,10 +37,26 @@
     z-index: 1;
 }
 
+.bottom-box {
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.circle {
+    background: #fff;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin: 20px;
+    padding: 0;
+}
+
 h1 {
     font: normal normal 600 2.4rem/1.5rem 'Raleway', sans-serif;
     letter-spacing: 5px;
     margin: 0 3rem;
+    margin-top: 2rem;
     padding-bottom: 2rem;
     color: hsl(0, 0%, 100%);
     align-self: center;
@@ -53,8 +69,10 @@ h1 {
     position: absolute;
     right: -5rem;
     top: 8rem;
-    width: 50rem;
-    height: 35rem;
+    /* width: 50rem;
+    height: 35rem; */
+    width: 52vw;
+    height: 74vh;
     background-color: hsl(358, 88%, 44%);
     border-radius: 24px;
     border: 3px solid black;
@@ -67,7 +85,7 @@ h1 {
     height: 80%;
     background-color: lightgray;
     align-self: center;
-    margin: 4rem 4rem 3rem 4rem;
+    margin: 4rem 4rem 0 4rem;
 }
 
 .button-container {
@@ -77,26 +95,6 @@ h1 {
     position: relative;
     top: 20rem;
     /* transform: skewY(8deg) scale(1) translate3d(0, 0, 0); */
-}
-
-.reset-shake {
-    width: auto;
-    height: auto;    
-}
-
-.rgb-button {
-    width: auto;
-    height: auto;
-}
-
-.hsl-button {
-    width: auto;
-    height: auto;
-}
-
-.rainbow-vomit {
-    width: auto;
-    height: auto;
 }
 
 button {
@@ -156,10 +154,16 @@ label {
 }
 
 input {
-    color: white;
+    color: black;
+    text-align: center;
     margin: 1rem;
     border-radius: 1.78rem;
     height: 1.5rem;
+    width: 12rem;
+}
+
+.pick-color {
+    border-radius: 0;
 }
 
 .arrow-submit {
@@ -218,3 +222,30 @@ body {
     font-family: 'Raleway', Arial, sans-serif;
     box-sizing: border-box;
 }
+
+@media screen and (max-width: 992px) {
+    .button-container {
+        top: 20%;
+        right: 20%;
+        left: 0%;
+        transform: skewY(8deg) scale(1) translate3d(0, 0, 0);
+    }
+    .input-box {
+        left: 17vw;
+        top: 48vh;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .button-container {
+        display: flex;
+        flex-flow: row wrap;
+        width: 35%;
+        top: 35%;
+        left: 0%;
+    }
+    .input-box {
+        left: 17vw;
+        top: 48vh;
+    }
+ }
