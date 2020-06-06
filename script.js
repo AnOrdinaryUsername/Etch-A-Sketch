@@ -82,9 +82,13 @@ function random(min, max) {
 function inputGridSize() {
     let inputs = document.querySelectorAll('input');
 
-    // Check if input is empty or is not a number
+    
     document.querySelectorAll('.arrow-submit')[0].addEventListener('click', function(e) {
-
+        // Check if input is empty or is not a valid number
+        if ( (inputs[0].value === '' || isNaN(inputs[0].value) ) 
+              || (inputs[0].value > 100 || inputs[0].value < 0) )
+              return;
+              
         // Loop through NodeList and remove all Etch-A-Sketch boxes
         document.querySelectorAll('.box').forEach(e => e.remove());
 
